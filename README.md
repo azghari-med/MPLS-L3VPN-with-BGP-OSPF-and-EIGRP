@@ -518,11 +518,11 @@ ip vrf SHARED
 
 interface Ethernet0/3
 
-&#x20;ip vrf forwarding SHARED
+ip vrf forwarding SHARED
 
-&#x20;ip address 10.0.9.2 255.255.255.0
+ip address 10.0.9.2 255.255.255.0
 
-&#x20;no shutdown
+no shutdown
 
 
 
@@ -575,13 +575,10 @@ no shutdown
 ip route 0.0.0.0 0.0.0.0 10.0.9.2
 
 
-
 **then add in PE1**
 
 
-
 ip route vrf SHARED 10.99.99.1 255.255.255.255 10.0.9.1
-
 
 
 ### That is All You Need on PE2
