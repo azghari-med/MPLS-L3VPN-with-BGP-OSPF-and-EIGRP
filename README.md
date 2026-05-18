@@ -172,7 +172,6 @@ ip address 10.10.10.1 255.255.255.255
 no shutdown
 
 
-
 ! On PE2
 
 interface Loopback0
@@ -433,22 +432,17 @@ network 192.168.100.0 0.0.0.3 area 0
 network 10.10.10.2 0.0.0.0 area 0
 
 
-
-
-
 **\*\*Configure MPLS IN PE1 PE2 \*\***
 
 
 
 PE1# inter e1/0
 
-&#x20;    **mpls ip**
-
-
+mpls ip
 
 PE2# inter e1/0
 
-&#x20;    **mpls ip**
+mpls ip
 
 
 
@@ -536,13 +530,13 @@ interface Ethernet0/3
 
 router bgp 65000
 
-&#x20;address-family ipv4 vrf SHARED
+address-family ipv4 vrf SHARED
 
-&#x20; redistribute connected
+redistribute connected
 
-&#x20; redistribute static
+redistribute static
 
-&#x20;exit-address-family
+exit-address-family
 
 ! Add import of SHARED RT into BLUE VRF
 ip vrf BLUE
@@ -560,9 +554,9 @@ ip vrf BLUE
 
 interface Ethernet0/0
 
-&#x20;ip address 10.0.9.1 255.255.255.0
+ip address 10.0.9.1 255.255.255.0
 
-&#x20;no shutdown
+no shutdown
 
 
 
@@ -570,9 +564,9 @@ interface Ethernet0/0
 
 interface Loopback0
 
-&#x20;ip address 10.99.99.1 255.255.255.255
+ip address 10.99.99.1 255.255.255.255
 
-&#x20;no shutdown
+no shutdown
 
 
 
